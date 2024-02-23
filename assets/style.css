@@ -186,3 +186,52 @@ footer nav ul {
 	margin: 2em
 }
 
+/* me */
+
+.filtres {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.filtres div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px #1D6154 solid;
+	border-radius: 60px;
+	min-width: 98px;
+}
+
+.filtres div p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	height: 19px;
+	padding: 8px 10px;
+}
+
+.activeF {
+	background-color: #1D6154;
+}
+
+.filtres .activeF p{
+	color: #FFFFFF;
+}
+
+.filtres div:hover {
+	background-color: #1D6154;
+	cursor: pointer;
+}
+
+.filtres div:hover p {
+	color: #FFFFFF;
+}
+
+/* end of me */
