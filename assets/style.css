@@ -226,12 +226,17 @@ footer nav ul {
 }
 
 .filtres div:hover {
-	background-color: #1D6154;
+	background-color: #0E2F28;
 	cursor: pointer;
 }
 
 .filtres div:hover p {
 	color: #FFFFFF;
+}
+
+nav a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
 /* end of me */
