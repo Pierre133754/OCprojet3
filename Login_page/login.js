@@ -29,7 +29,7 @@ async function login(email, pass) {
             headers: {"Content-Type": "application/json"}
         }).then(ok => ok.json());
         if (wowee.message === "user not found") {
-            throw new Error("E-mail / mot de passe incorrect");
+            throw new Error("Erreur dans l’identifiant ou le mot de passe");
         } else {
             window.localStorage.setItem("token", wowee.token);
             window.location.href = "../index.html";
