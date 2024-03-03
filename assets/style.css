@@ -139,7 +139,7 @@ li:hover {
 }
 #contact {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
 #contact > * {
 	text-align: center;
@@ -241,7 +241,7 @@ nav a {
 
 /* end of me */
 
-/* me #2 */
+/* me #2 (#MeToo) (me too me from the kanye album thing before he went crazy like wtf happenned there i mean the guy was okay then he just switched up on us like WTF im looking at my screen im like WTF this guy serious or what i mean i like kanye and stuff and im like woooooooooooooow dude now thats some good entertainment right there but why the jews? anyway new album is a banger -this code is brought to you by the new kanye album- ahhhhh shit i just seen, mf has bars on the MeToo thingy thing thing, what's that about anyways ? look ma, im using the camelCase funny now, do you love me now ? */
 
 .top {
 	height: 59px;
@@ -309,7 +309,7 @@ nav a {
 	display: none;
 }
 
-.modal1 {
+.modal {
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -323,7 +323,7 @@ nav a {
 	justify-content: center;
 }
 
-.M1content {
+.Mcontent {
 	background-color: white;
 	width: 630px;
 	border-radius: 10px;
@@ -334,18 +334,16 @@ nav a {
 	position: relative;
 }
 
-.M1content h2 {
+.Mcontent h2 {
 	margin: 50px 0 50px 0;
 	font-family: 'Work Sans';
 	color: black;
 	font-weight: 400;
 	font-size: 26px;
-
 }
 
-.M1content p {
+.Mp {
 	border-radius: 60px;
-	background-color: #1D6154;
 	color: white;
 	padding: 11px 50px;
 	margin: 45px;
@@ -354,7 +352,7 @@ nav a {
 	font-size: 14px;
 }
 
-.M1close {
+.Mclose {
 	color: black;
 	font-size: 24px;
 	font-weight: bold;
@@ -365,14 +363,14 @@ nav a {
 	justify-content: center;
 	position: absolute;
 	top: 5%;
-	left: 90%;
+	left: 92%;
 }
 
-.M1close:hover {
+.Mclose:hover {
 	cursor: pointer;
 }
 
-.M1content p:hover {
+.ok:hover {
 	cursor: pointer;
 }
 
@@ -409,6 +407,130 @@ nav a {
 
 .M1img i:hover {
 	cursor: pointer;
+}
+
+.modal2 {
+	display: none;
+}
+
+.M2p {
+	padding: 11px 92px;
+	background-color: #A7A7A7;
+}
+
+.ok {
+	background-color: #1D6154;
+}
+
+.M2form {
+	width: 70%;
+	border-bottom: 1px solid #B3B3B3;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+#M2title, #M2type {
+	border: 0;
+	box-shadow: 0px 4px 14px 0px #00000017;
+	height: 51px;
+	display: flex;
+	text-align: center;
+	font-family: 'Work Sans';
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 15px;
+}
+
+.M2form label {
+	font-family: 'Work Sans';
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 30px;
+	color: #3D3D3D;
+}
+
+.M2Fblock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #E8F1F6;
+	border-radius: 3px;
+}
+
+.M2Fblock input {
+	display: none;
+}
+
+.M2Fblock i {
+	color: #B9C5CC;
+	padding: 4px 4px;
+	font-size: 68px;
+	margin-top: 20px;
+}
+
+.M2FpB {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #306685;
+	background-color: #CBD6DC;
+	border-radius: 50px;
+	padding: 11px 34px;
+	font-family: 'Work Sans';
+	font-weight: 600;
+}
+
+.M2Fblock:hover {
+	cursor: pointer;
+}
+
+.M2Fimg:hover {
+	cursor: pointer;
+}
+
+.M2Fp {
+	margin: 10px 0px 20px 0px;
+	font-size: 10px;
+	color: #444444;
+	font-family: 'Work Sans';
+	font-weight: 400;
+}
+
+.M2Fimg {
+	height: 169px;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background-color: #E8F1F6;
+	border-radius: 3px;
+}
+
+.M2Fimg img {
+	object-fit: cover;
+	height: 100%;
+	width: 129px;
+}
+
+.fa-arrow-left {
+	color: black;
+	font-size: 21px;
+	font-weight: bold;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	padding: 0 1.5px;
+}
+
+.fa-arrow-left:hover {
+	cursor: pointer;
+}
+
+/* looks better imo */
+.gallery img {
+	object-fit: cover;
+	height: 491px;
+	width: 367px;
 }
 
 /* end of me 2 */

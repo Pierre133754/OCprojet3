@@ -1,37 +1,44 @@
 import { 
     createFigure,
     createFilters,
-    createBtn,
-    createModalBtn,
-    createMting
+    createEditAndModal,
+    createModal1Works,
+    createModal2Categories,
+    setModal2Img,
+    checkIt
 } from "./stuff.js";
 
 /* base site */
 
-const Lworks = await fetch ("http://localhost:5678/api/works").then(Lworks => Lworks.json());
-createFigure(Lworks);
-
-const Lcat = await fetch ("http://localhost:5678/api/categories").then(Lcat => Lcat.json());
-createFilters(Lcat);
-
-createBtn(document.querySelectorAll(".filtres div"));
+const localWorks = await fetch ("http://localhost:5678/api/works").then(localWorks => localWorks.json());
+createFigure(localWorks);
+createFilters();
 
 /* end of base site */
 
 /* modal */
 
 if (window.localStorage.getItem("token") !== null) {
-    createModalBtn();
-    document.querySelector("nav a li").innerText = "logout";
-    document.querySelector("nav a").href = "#";
-    document.querySelector("nav a").addEventListener("click", function() {
-        window.localStorage.removeItem("token");
-        window.location.href = "index.html";
+    createEditAndModal();
+    createModal1Works();
+    createModal2Categories();
+
+    /* both divs now become redirect to input type file */
+    document.querySelector(".M2Fblock").addEventListener("click", function() {
+        document.getElementById("M2file").click();
+    });
+    document.querySelector(".M2Fimg").addEventListener("click", function() {
+        document.getElementById("M2file").click();
+    });
+    /*   */
+
+    document.getElementById("M2file").addEventListener("change", function() {
+        setModal2Img();
+    });
+
+    document.querySelector(".M2form").addEventListener("input", function() {
+        checkIt();
     });
 }
-
-createMting(Lworks, window.localStorage.getItem("token"));
-
-
 
 /* end of modal */
