@@ -20,6 +20,7 @@ form.addEventListener("submit", (event) => {
 
 async function login(email, pass) {
     try {
+        let vovee = "";
         const wowee = await fetch("http://localhost:5678/api/users/login",{
             method: "POST",
             body: `{
@@ -27,8 +28,12 @@ async function login(email, pass) {
                 "password": "${pass}"
             }`,
             headers: {"Content-Type": "application/json"}
-        }).then(ok => ok.json());
-        if (wowee.message === "user not found") {
+        }).then(ok => {
+            vovee = ok.status;
+            return ok.json();
+        });
+        /* fixed the api being inconsistent */
+        if (vovee !== 200) {
             throw new Error("Erreur dans l’identifiant ou le mot de passe");
         } else {
             window.localStorage.setItem("token", wowee.token);
