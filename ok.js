@@ -23,7 +23,7 @@ if (window.localStorage.getItem("token") !== null) {
     createModal1Works();
     createModal2Categories();
 
-    /* both divs now become redirect to input type file */
+    /* both divs now redirect to input type file */
     document.querySelector(".M2Fblock").addEventListener("click", function() {
         document.getElementById("M2file").click();
     });
