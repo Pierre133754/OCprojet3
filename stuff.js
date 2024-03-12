@@ -66,7 +66,7 @@ export function createEditAndModal() {
     /* edit stuff appears */
     document.querySelector(".top").classList.remove("hidden");
     document.querySelector(".squat").classList.remove("hidden");
-    document.querySelector("nav a li").innerText = "logout";
+    document.querySelector("nav a").innerText = "logout";
     document.querySelector("nav a").href = "#";
     document.querySelector("nav a").addEventListener("click", function() {
         window.localStorage.removeItem("token");
