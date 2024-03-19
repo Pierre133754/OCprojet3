@@ -22,6 +22,8 @@ if (window.localStorage.getItem("token") !== null) {
     createEditAndModal();
     createModal1Works();
     createModal2Categories();
+    document.querySelector(".filtres").style.display = "none";
+    document.querySelector(".Pbundle").style.marginBottom = "80px";
 
     /* both divs now redirect to input type file */
     document.querySelector(".M2Fblock").addEventListener("click", function() {

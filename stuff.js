@@ -1,5 +1,9 @@
 /* base site */
 
+/**
+ * Displays works on main page
+ * @param {Object[]} meat array of works to display
+ */
 export function createFigure(meat) {
     document.querySelector(".gallery").innerHTML = "";
     let gallery = ``;
@@ -29,7 +33,6 @@ export async function createFilters() {
     document.querySelector(".filtres").innerHTML = filters;
     createFiltersButtons();
 }
-
 
 export async function createFiltersButtons() {
     const meat = document.querySelectorAll(".filtres div");
@@ -138,6 +141,10 @@ export async function createModal1Works () {
      }
 }
 
+/**
+ * Delete work from database
+ * @param {Object} meat work to delete
+ */
 export async function deleteWork (meat) {
     try {
         const token = window.localStorage.getItem("token");
@@ -172,15 +179,28 @@ export async function createModal2Categories() {
 
 export function setModal2Img() {
     try {
-        document.querySelector(".M2Fblock").style.display = "none";
-        document.querySelector(".M2Fimg").style.display = "flex";
-        const imgData = document.getElementById("M2file").files[0];
-        const placeToPutIt = document.querySelector(".M2Fimg img");
-        placeToPutIt.src = URL.createObjectURL(imgData);
+        const sendButton = document.querySelector(".M2p");
+        const imgSize = document.getElementById("M2file").files[0].size/1024;
+        if (imgSize <= 4096) {
+            document.querySelector(".M2Fblock").style.display = "none";
+            document.querySelector(".M2Fimg").style.display = "flex";
+            const imgData = document.getElementById("M2file").files[0];
+            const placeToPutIt = document.querySelector(".M2Fimg img");
+            placeToPutIt.src = URL.createObjectURL(imgData);
+        } else {
+            if (sendButton.classList.length === 3) {
+                sendButton.classList.remove("ok");
+                sendButton.removeEventListener("click", SENDIT);
+            }
+            document.getElementById("M2file").value = "";
+            alert("Taille de l'image superieur a 4 Mo");
+            throw new Error("Img > 4 Mo");
+        }
     } catch (error) {
         /* fixes some really obscure things that nobody wouldve ever seen */
         document.querySelector(".M2Fblock").style.display = "flex";
         document.querySelector(".M2Fimg").style.display = "none";
+        console.log(error.message);
     }
 }
 
